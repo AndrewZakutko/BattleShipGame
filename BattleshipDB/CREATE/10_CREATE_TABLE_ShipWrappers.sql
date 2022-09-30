@@ -1,0 +1,7 @@
+CREATE TABLE ShipWrappers(
+	Id INT NOT NULL PRIMARY KEY IDENTITY,
+	FieldId INT FOREIGN KEY REFERENCES [dbo].[Fields](Id),
+	ShipId INT NOT NULL FOREIGN KEY REFERENCES [dbo].[Ships](Id),
+	PositionId INT FOREIGN KEY REFERENCES [dbo].[Positions](Id)
+)
+GO
